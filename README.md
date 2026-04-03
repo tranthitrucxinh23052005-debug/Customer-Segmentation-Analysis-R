@@ -1,129 +1,65 @@
-# Sales Management System – SQL Project
+# Customer Segmentation & Sales Forecasting – R Project
 
 ## 📌 Project Overview
-This project is a **Sales Management System** built with SQL Server, designed to manage customers, employees, products, invoices, and perform business analysis. It aims to provide actionable insights for business decision-making by analyzing sales data, customer behavior, and revenue trends.
+
+This is a **Customer Segmentation and Sales Forecasting** project developed in R. The goal is to analyze customer purchasing behaviors and group customers into meaningful segments. Additionally, time series forecasting (ARIMA) is used to predict future sales trends based on historical data.
 
 ---
 
 ## 🛠 Tech Stack
-- SQL Server  
-- T-SQL (Transactional SQL)  
-- Database Design (Normalization – 3NF)  
+
+- **R** programming language  
+- Libraries: tidyverse, cluster, factoextra, ARIMA, etc.  
+- Tools: RStudio, R Markdown
 
 ---
 
-## 📊 Database Schema
-The database contains the following tables:
+## 📊 Problem Statement
 
-| Table Name | Description |
-|------------|-------------|
-| KHACHHANG | Customer information |
-| NHANVIEN  | Employee and sales staff data |
-| SANPHAM   | Product catalog |
-| HOADON    | Invoice header |
-| CTHD      | Invoice details |
+Businesses seek to understand customer behavior to:
+- identify distinct customer segments
+- tailor marketing and sales strategies
+- forecast future revenue based on historical sales patterns
 
-**Relationships:**
-- Primary Keys and Foreign Keys enforced  
-- Normalized to **3NF** to ensure data consistency and avoid redundancy
+This project uses clustering (K‑Prototypes or similar) and time series forecasting (ARIMA) to achieve these objectives.
 
 ---
 
-## 🔍 Key Business Queries & Insights
-1. **Product Filtering**
-   - Filter products by category, price, or origin  
-   - **Insight:** Identify most popular products within specific price ranges
+## 🧠 Methodology
 
-2. **Sales Analysis**
-   - Analyze invoices by date, employee, or customer  
-   - **Insight:** Detect peak sales periods and top-performing employees
+1. **Data Preprocessing**
+   - Clean and prepare data
+   - Handle missing values and scale features
 
-3. **Revenue Reports**
-   - Aggregate revenue per product, per customer, and per period  
-   - **Insight:** Highlight high-value transactions and profitable product categories
+2. **Customer Segmentation**
+   - Apply clustering algorithms to group customers
+   - Evaluate segment quality with silhouette or similar metrics
 
-4. **Customer Segmentation**
-   - Group customers by purchase behavior  
-   - **Insight:** Target marketing efforts to high-value segments
+3. **Sales Forecasting**
+   - Build ARIMA models to forecast sales trends
+   - Validate model accuracy
 
 ---
 
-## 📈 Example Outputs
-*(Add screenshots or sample query results here)*  
+## 📈 Key Insights
 
-Example:  # Sales Management System – SQL Project
-
-## 📌 Project Overview
-This project is a **Sales Management System** built with SQL Server, designed to manage customers, employees, products, invoices, and perform business analysis. It aims to provide actionable insights for business decision-making by analyzing sales data, customer behavior, and revenue trends.
+- Identified several customer segments with distinct purchasing patterns
+- Segments that contribute most to revenue can be targeted for retention
+- Forecasted future sales trends to inform business strategy
 
 ---
 
-## 🛠 Tech Stack
-- SQL Server  
-- T-SQL (Transactional SQL)  
-- Database Design (Normalization – 3NF)  
+## 🧪 How to Run
 
----
-
-## 📊 Database Schema
-The database contains the following tables:
-
-| Table Name | Description |
-|------------|-------------|
-| KHACHHANG | Customer information |
-| NHANVIEN  | Employee and sales staff data |
-| SANPHAM   | Product catalog |
-| HOADON    | Invoice header |
-| CTHD      | Invoice details |
-
-**Relationships:**
-- Primary Keys and Foreign Keys enforced  
-- Normalized to **3NF** to ensure data consistency and avoid redundancy
-
----
-
-## 🔍 Key Business Queries & Insights
-1. **Product Filtering**
-   - Filter products by category, price, or origin  
-   - **Insight:** Identify most popular products within specific price ranges
-
-2. **Sales Analysis**
-   - Analyze invoices by date, employee, or customer  
-   - **Insight:** Detect peak sales periods and top-performing employees
-
-3. **Revenue Reports**
-   - Aggregate revenue per product, per customer, and per period  
-   - **Insight:** Highlight high-value transactions and profitable product categories
-
-4. **Customer Segmentation**
-   - Group customers by purchase behavior  
-   - **Insight:** Target marketing efforts to high-value segments
-
----
-
-## 📈 Example:  
-SELECT TOP 5 ProductName, SUM(Quantity*Price) AS Revenue
-FROM CTHD
-JOIN SANPHAM ON CTHD.ProductID = SANPHAM.ProductID
-GROUP BY ProductName
-ORDER BY Revenue DESC;
-## 📌 How to Run
-1. Open `CSDL_KT_D04.sql` in SQL Server Management Studio  
-2. Execute the script to create database and tables  
-3. Run queries in SQL Server to generate reports and insights  
-
----
-
-## 📈 Project Outcome
-- Designed a fully normalized sales database (3NF)  
-- Built analytical queries for product, sales, and revenue analysis  
-- Extracted actionable insights to support business decision-making  
-- Gained experience in database design, SQL queries, and data-driven business analysis  
+1. Open the R Markdown file (`Phân tích dữ liệu khách hàng.Rmd`) in RStudio  
+2. Install required R packages (e.g., tidyverse, cluster, etc.)  
+3. Run all chunks to produce the analysis report and visuals  
 
 ---
 
 ## 🔗 Portfolio & Contact
+
 **Author:** Tran Thi Truc Xinh  
-**LinkedIn:** [https://www.linkedin.com/in/tranthitrucxinh](https://www.linkedin.com/in/tranthitrucxinh)  
-**GitHub:** [https://github.com/tranthitrucxinh23052005-debug](https://github.com/tranthitrucxinh23052005-debug)  
+**LinkedIn:** https://www.linkedin.com/in/tranthitrucxinh  
+**GitHub:** https://github.com/tranthitrucxinh23052005-debug  
 **Email:** tranthitrucxinh23052005@gmail.com
